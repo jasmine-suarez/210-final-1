@@ -6,7 +6,7 @@
 #include <map>
 using namespace std;
 
-void print_in_range()
+void print_in_range(const map<string, int> &traffic, int low, int high);
 
 int main() {
     // Milestone 1
@@ -57,12 +57,20 @@ int main() {
     cout << endl;
 
     // Milestone 3
-
-
-
     cout << "Airports with traffic in range [5, 8]:\n";
+    print_in_range(traffic, 5, 8);
 
-
+    cout << "Airports with traffic in range [9, 12]:\n";
+    print_in_range(traffic, 9, 12);
 
     return 0;
+}
+
+void print_in_range(const map<string, int> &traffic, int low, int high) {
+    for (auto& pair : traffic) {
+        if (pair.second >= low && pair.second <= high) {
+            cout << pair.first << " " << pair.second << endl;
+        }
+    }
+    cout << endl;
 }
