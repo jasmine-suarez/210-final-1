@@ -41,13 +41,16 @@ int main() {
     // Milestone 2
     int maxCount = 0;
     for (auto& pair : traffic) {
-        if (pair.second)
+        if (pair.second > maxCount) {
+            maxCount = pair.second;
+        }
     }
-
 
     cout << "Busiest airport(s) with count " << maxCount << ":\n";
     for (auto& pair : traffic) {
-
+        if (pair.second == maxCount) {
+            cout << pair.first << " " << pair.second << endl;
+        }
     }
     cout << endl;
 
