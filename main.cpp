@@ -6,6 +6,8 @@
 #include <map>
 using namespace std;
 
+void print_in_range()
+
 int main() {
     // Milestone 1
     map<string, int> traffic;
@@ -53,6 +55,13 @@ int main() {
         }
     }
     cout << endl;
+
+    // Milestone 3
+
+
+
+    cout << "Airports with traffic in range [5, 8]:\n";
+
 
 
     return 0;
