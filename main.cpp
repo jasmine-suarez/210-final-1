@@ -62,7 +62,7 @@ int main() {
 
     cout << "Airports with traffic in range [9, 12]:\n";
     print_in_range(traffic, 9, 12);
-/
+
     return 0;
 }
 
