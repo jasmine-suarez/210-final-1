@@ -7,6 +7,7 @@
 using namespace std;
 
 int main() {
+    // Milestone 1
     map<string, int> traffic;
 
     ifstream fin;
@@ -21,15 +22,21 @@ int main() {
         if (traffic.find(origin) == traffic.end()) {
             traffic[origin] = 0;
         }
+        traffic[origin]++;
 
         if (traffic.find(destination) == traffic.end()) {
             traffic[destination] = 0;
         }
+        traffic[destination]++;
     }
 
     fin.close();
 
-    cout << "TEST: TRAFFIC REPORT\n";
+    cout << "All airport traffic counts:\n";
+    for (auto& pair : traffic)
+        cout << pair.first << " " << pair.second << endl;
+
+    cout << endl;
 
 
     return 0;
