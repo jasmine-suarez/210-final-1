@@ -18,6 +18,19 @@ int main() {
 
     string origin, destination;
     while (fin >> origin >> destination) {
+        if (traffic.find(origin) == traffic.end()) {
+            traffic[origin] = 0;
+        }
+
+        if (traffic.find(destination) == traffic.end()) {
+            traffic[destination] = 0;
+        }
+    }
+
+    fin.close();
+
+    cout << "TEST: TRAFFIC REPORT\n";
+
 
     return 0;
 }
